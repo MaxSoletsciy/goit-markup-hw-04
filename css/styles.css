@@ -376,17 +376,13 @@ header {
 .list-clients {
 	display: flex;
 	justify-content: space-between;
-}
-
-.list-clients .list {
-	/* outline: 1px solid darkblue; */
+	margin-top: 50px;
 }
 
 .icon-client {
 	width: 170px;
 	height: 92px;
 	padding: 16px 32px;
-
 
 	fill: var(--icon-color);
 }
