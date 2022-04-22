@@ -105,9 +105,13 @@ a {
 	padding-bottom: 32px;
 }
 
-.contacts-head .email:hover,
-.contacts-head .email:focus {
+.email:hover,
+.email:focus {
 	color: var(--accent-color);
+}
+
+.email:hover .envelope {
+	fill: var(--accent-color);
 }
 
 .site-nav .link.current {
@@ -131,24 +135,16 @@ a {
 
 /* контакти хедер */
 .contacts {
-	display: inline-block;
-	vertical-align: middle;
 	margin-right: 10px;
-	width: 16px ;
-	height: 16px;
-}
-
-.envelope {
 	fill: var(--primery-text-color);
-}
-
-.envelope:hover {
-	fill: var(--accent-color);
 }
 
 .contacts-head a {
 	color: var(--primery-text-color);
 	font-weight: 500;
+
+	display: flex;
+	align-items: center;
 }
 
 .contacts-head {
@@ -175,12 +171,12 @@ header {
 	border-bottom: 1px solid var(--border-header-color);
 }
 
-/* hero */
+/* HERO */
 .hero {
 	padding-top: 200px;
 	padding-bottom: 200px;
-	max-height: 1600px;
-
+	max-width: 1600px;
+	margin: 0 auto;
 	text-align: center;
 
 	background-color: var(--background-hero-color);
@@ -286,9 +282,13 @@ header {
 	background-color: var(--bg-section-team);
 	width: 270px;
 	height: 120px;
-	padding-left: 100px;
-	padding-top: 25px;
 	margin-bottom: 30px;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+	
 }
 
 .desc-item {
@@ -343,7 +343,7 @@ header {
 }
 
 .team p {
-	margin: 0 auto 30px;
+	margin: 0 auto 16px;
 
 	font-size: 16px;
 	line-height: 1.18;
@@ -379,11 +379,16 @@ header {
 	margin-top: 50px;
 }
 
-.icon-client {
+.list-clients .list {
 	width: 170px;
 	height: 92px;
-	padding: 16px 32px;
+}
 
+.icon-client {
+	/* width: 170px;
+	height: 92px;
+	padding: 16px 32px; */
+	display: block;
 	fill: var(--icon-color);
 }
 
@@ -392,16 +397,19 @@ header {
 }
 
 .box {
-	display: block;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
 	border: 1px solid var(--icon-color);
 	border-radius: 4px;
-
-	width: 170px;
-	height: 92px;
 }
 
 .box:hover {
 	border: 1px solid var(--accent-color);
+	cursor: pointer;
 }
 
 /* NETWORKS */
@@ -418,6 +426,7 @@ header {
 	width: 44px;
 	height: 44px;
 	border-radius: 50%;
+
 }
 
 .link-network:hover,
@@ -473,6 +482,7 @@ header {
 
 .footer .conteiner {
 	display: flex;
+	align-items: baseline;
 }
 
 .call {
@@ -485,7 +495,7 @@ header {
 }
 
 .footer-network {
-	padding-top: 12px;
+	/* padding-top: 12px; */
 	margin-left: 70px;
 }
 
@@ -599,8 +609,12 @@ header {
 	margin-bottom: 30px;
 }
 
-.card:hover,
-.card:focus {
+.card a {
+	display: block;
+}
+
+.card a:hover,
+.card a:focus {
 	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
 	0px 4px 4px rgba(0, 0, 0, 0.06),
 	1px 4px 6px rgba(0, 0, 0, 0.16);
